@@ -113,8 +113,8 @@ def main_loop():
                 if x is not None and y is not None:
                     move_mouse(x, y)
             
-            # 250Hz响应频率，每次4毫秒延迟
-            time.sleep(0.004)  # 4毫秒延迟，实现250Hz
+            # 最小延迟，提高响应速度
+            time.sleep(0.001)  # 1毫秒延迟
             
         except Exception as e:
             # 错误时短暂等待，避免死循环
